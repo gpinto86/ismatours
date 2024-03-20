@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+/*font-family: 'Roboto Condensed', sans-serif;*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.head__logo {
+    margin-bottom: 1rem;
+}                           
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: url("/images/fondo_turquesa.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+    align-items: center
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img{
+    height: 50px;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color:#EDDDD4;
+    display: block;
+    font-weight: bold;
+}
+.menu .navbar ul li a:hover {
+    color: #283D3B;
+}
+
+a:is(:link, :active, :visited).active {
+    background-color: #266371;
+    /*padding: 13px 20px;*/
+    border-radius: 10px;
+}
+.icons {
+    display:flex
+}
+.icons i {
+    font-size: 25px;
+    color:#EDDDD4;
+    margin-right: 15px;
+    cursor: pointer
+}
+.icons i:hover {
+    color: #283D3B;
+}
+
+#menu {
+    display: none;
+}
+.menu-icono {
+    width: 25px;
+}
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.content{
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Quicksand', sans-serif;
+    padding: 0 1.5em ;
+    color: #034153;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+.logo{
+    text-align: center;
+    font-size: 3em;
+}
+.contact-wrapper{
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+}
+
+.contact-wrapper > * {
+    padding: 1em;
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-form form label {
+    display: block;
+}
+
+.contact-form p{
+    padding: 0.1em;
+    margin: auto;
+}
+
+.contact-form form .block {
+    grid-column: 1 / 3;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #fff;
+    border-bottom: 1px solid #EDDDD4;
+}
+
+.contact-form form button {
+    background: #283D3B;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 200px;
+}
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+    background: #EDDDD4;
+    color: #283D3B;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+/* CONTACT INFO */
+.contact-info {
+    background: rgba(255, 255, 255, .4);
+}
+
+.contact-info h4, 
+.contact-info ul, 
+.contact-info p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.contact-info ul{
+    list-style: none;
+    padding: 1em;
+}
+
+.contact-info ul li{
+    padding: .3em;
+}
+
+/* LARGE SIZE */
+@media(min-width: 700px) {
+    body {
+        padding: 0;
+    }
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .contact-wrapper > * {
+        padding: 2em;
+    }
+    .contact-info h4,
+    .contact-info ul,
+    .contact-info p {
+        text-align: left;
+    }
+    .contact-info .agencia{
+        text-align: center;
+    }
+}
+
+
+@media(max-width:991px) {
+
+    .menu {
+        padding: 30px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #3F3F3F48;
+        backdrop-filter: blur(4px);
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .header {
+        padding: 80px 30px 50px 30px;
+        align-items: self-start;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-txt {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .header-txt h1 {
+        margin-bottom: 10px;
+    }
+
+    .images {
+        position: initial;
+        width: 300px;
+    }
+
+    .rows {
+        display: none;
+    }
+}

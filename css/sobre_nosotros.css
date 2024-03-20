@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+/*font-family: 'Roboto Condensed', sans-serif;*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: url("/images/fondo_turquesa.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img{
+    height: 50px;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color:#EDDDD4;
+    display: block;
+    font-weight: bold;
+}
+
+.menu .navbar ul li a:hover {
+    color: #283D3B;
+}
+
+a:is(:link, :active, :visited).active {
+    background-color: #266371;
+    /*padding: 13px 20px;*/
+    border-radius: 10px;
+}
+
+.icons {
+    display:flex
+}
+
+.icons i {
+    font-size: 25px;
+    color:#EDDDD4;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.icons i:hover {
+    color: #283D3B;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.heading{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.heading h1 {
+    font-size: 50px;
+    color: #266371;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.heading h1::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #266371;
+}
+
+.heading p {
+    font-size: 18px;
+    color: #EDDDD4;
+    margin-bottom: 35px;    
+}
+
+.container-about {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.about-content{
+    flex: 1;
+}
+
+.about-content h2 {
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: #034153;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.about-content p {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #034153;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.about-content .read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #266371;
+    color: #EDDDD4;
+    font-size: 19px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 15px;
+    transition: 0.3s ease;   
+}
+
+.about-content .read-more:hover {
+    background-color: #3e8e99;
+}
+
+.photos{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 175vh;
+}
+
+.photos .gallery{
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 400px 400px 390px;
+    grid-template-rows: 400px 400px 390px;
+    grid-gap: 1rem;
+}
+
+.photos .gallery img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}   
+
+.photos .gallery .img-a{
+    grid-column: 1/3
+}
+
+.photos .gallery .img-b{
+    grid-column: 3/4
+}
+
+.photos .gallery .img-f{
+    grid-column: 1/4
+}
+
+.photos .gallery .img-g{
+    grid-column: 1/2
+}
+
+
+/*aca inicia responsiv de index*/
+
+@media(max-width:991px) {
+
+    .menu {
+        padding: 30px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #3F3F3F48;
+        backdrop-filter: blur(4px);
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .header {
+        padding: 80px 30px 50px 30px;
+        align-items: self-start;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-txt {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .header-txt h1 {
+        margin-bottom: 10px;
+    }
+
+    .images {
+        position: initial;
+        width: 300px;
+    }
+
+    .rows {
+        display: none;
+    }
+    .heading h1 {
+        font-size: 36px; /* Ajusta el tamaño del título para dispositivos más pequeños */
+      }
+    
+      .heading h1::after {
+        height: 3px; /* Ajusta el grosor de la línea después del título para dispositivos más pequeños */
+      }
+    
+      .heading p {
+        font-size: 16px; /* Ajusta el tamaño del párrafo para dispositivos más pequeños */
+        margin-bottom: 25px; /* Reduce el espacio inferior del párrafo */
+      }
+    
+      .container-about {
+        width: 100%; /* Hace que el contenedor sea del 100% del ancho disponible */
+        padding: 10px; /* Ajusta el relleno para dispositivos más pequeños */
+      }
+    
+      .about {
+        flex-direction: column; /* Cambia la dirección de la flexbox a columna */
+        align-items: center; /* Centra los elementos */
+      }
+    
+      .about-content h2 {
+        font-size: 20px; /* Ajusta el tamaño del subtítulo para dispositivos más pequeños */
+        margin-bottom: 10px; /* Reduce el espacio inferior del subtítulo */
+      }
+    
+      .about-content p {
+        font-size: 16px; /* Ajusta el tamaño del texto para dispositivos más pequeños */
+        margin-bottom: 20px; /* Reduce el espacio inferior del texto */
+      }
+    
+      .about-content .read-more {
+        padding: 8px 15px; /* Ajusta el tamaño del botón para dispositivos más pequeños */
+        font-size: 16px; /* Ajusta el tamaño del texto del botón para dispositivos más pequeños */
+        margin-top: 10px; /* Reduce el espacio superior del botón */
+      }
+    
+      .photos .gallery {
+        grid-template-columns: 100%; /* Cambia a una sola columna para dispositivos más pequeños */
+        grid-template-rows: auto; /* Ajusta las filas automáticamente */
+      }
+    
+      .photos .gallery img {
+        border-radius: 5px; /* Reduce el radio de la esquina de las imágenes */
+      }
+    
+      .photos .gallery .img-a,
+      .photos .gallery .img-b,
+      .photos .gallery .img-f,
+      .photos .gallery .img-g {
+        grid-column: auto; /* Restablece el diseño de la cuadrícula para las imágenes específicas */
+      }
+
+}

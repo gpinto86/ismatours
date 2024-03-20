@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+/*font-family: 'Roboto Condensed', sans-serif;*/
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: url("/images/fondo_turquesa.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+    align-items: center
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img{
+    height: 50px;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color:#EEF4ED;
+    display: block;
+    font-weight: bold;
+}
+
+.menu .navbar ul li a:hover {
+    color: #283D3B;
+}
+
+a:is(:link, :active, :visited).active {
+    background-color: #266371;
+    border-radius: 10px;
+}
+
+.icons {
+    display:flex
+}
+
+.icons i {
+    font-size: 25px;
+    color:#EDDDD4;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.icons i:hover {
+    color: #283D3B;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.servicios{
+    width: 950px;
+    margin: 0 auto;
+    margin-top: 60px;
+    right: 50px;
+    left: 50px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+section article{
+    transition: all 0.3s ease;
+    background-color: #EEF4ED;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0;
+    cursor: pointer;
+}
+
+.servicios ul{
+    list-style: none;
+    padding: 2%;
+    clear: left;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 19px;
+    color: #034153;
+}
+.servicios li{
+    margin: 0 0 1rem 0;
+    padding-inline-start: 3%;
+    color: #034153;
+}
+.time, .price{
+    color:#00838F;
+    padding-right: 2%;
+}
+
+.fa-dollar-sign{
+    padding-inline-start: 1%;
+}
+
+section article:hover{
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.5);
+} 
+
+section article h2, section article p {
+    margin: 1rem;
+    color: #034153;
+}
+
+@media(max-width:991px) {
+
+    .menu {
+        padding: 30px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #3F3F3F48;
+        backdrop-filter: blur(4px);
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .header {
+        padding: 80px 30px 50px 30px;
+        align-items: self-start;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-txt {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .header-txt h1 {
+        margin-bottom: 10px;
+    }
+
+    .images {
+        position: initial;
+        width: 300px;
+    }
+
+    .rows {
+        display: none;
+    }
+    .servicios{
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 30px;
+        right: 20px;
+        left: 20px;
+    }
+    .section article {
+        padding: 1rem;
+    }
+    section img {
+        width: 100%; 
+        max-width: 100%; 
+        height: auto; 
+    }
+    .servicios ul {
+        text-align: left;
+        line-height: 1.5;
+        font-size: 16px; 
+    }
+}
